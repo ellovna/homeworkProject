@@ -1,30 +1,45 @@
 package com.HW;
 
-public class Hybrid extends Cars{
-    private int battery;
+public class Hybrid extends Cars implements BatteryReplacement, BatteryPrice, BatteryCharge{
+    private int batteryCapacity;
     private int mpg;
 
-    public int getBattery(){
-        return battery;
+    public int getBatteryCapacity(){
+        return batteryCapacity;
     }
     public int getMpg(){
         return mpg;
     }
-    public void setBattery(int battery){
-        this.battery = battery;
+    public void setBatteryCapacity(int batteryCapacity){
+        this.batteryCapacity = batteryCapacity;
     }
     public void setMpg(int mpg){
         this.mpg = mpg;
+    }
+
+    @Override
+    public void showBatteryReplacement(){
+        System.out.println("Battery will need replacement in 15 years.");
+    }
+
+    @Override
+    public void getBatteryPrice(){
+        System.out.println("No need to get the price!");
+    }
+
+    @Override
+    public void getBatteryCharge(){
+        System.out.println("Hybrid Cars: Charge it daily, if you use the car every day");
     }
 
 
     public Hybrid(String model,
                   String color,
                   int averagePrice,
-                  int battery,
+                  int batteryCapacity,
                   int mpg){
         super(model, color, averagePrice);
-        this.battery = battery;
+        this.batteryCapacity = batteryCapacity;
         this.mpg = mpg;
 
 

@@ -1,6 +1,7 @@
 package com.HW;
 
-public class ElectricCar extends Cars {
+public class ElectricCar extends Cars implements BatteryReplacement, BatteryPrice, BatteryCharge {
+
 
     private int batteryCapacity;
 
@@ -16,6 +17,17 @@ public class ElectricCar extends Cars {
         this.batteryCapacity = batteryCapacity;
     }
 
+    public void showBatteryReplacement(){
+        System.out.println("Battery doesn't need replacement for the next 10 years.");
+    }
+
+    public void getBatteryPrice(){
+        System.out.println("Check the price before buying!");
+    }
+    public void getBatteryCharge(){
+        System.out.println("For Electric Cars: charge it every 3 days");
+    }
+
     @Override
     public String toString() {
         return "Model: " + getModel() +
@@ -23,6 +35,7 @@ public class ElectricCar extends Cars {
                 "\nAveragePrice: " + getAveragePrice() +
                 "\nBatteryCapacity: " + getBatteryCapacity();
     }
+
 }
 
     //public ElectricCar(String model,

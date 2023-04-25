@@ -1,6 +1,6 @@
 package com.HW;
 
-public class UsedCars extends Cars {
+public class UsedCars extends Cars implements OilChange, TirePressure {
     private int mileage;
     private int manufactureDate;
 
@@ -17,6 +17,14 @@ public class UsedCars extends Cars {
     }
     public void setManufactureDate(int manufactureDate){
         this.manufactureDate = manufactureDate;
+    }
+
+    public void getOilChange(){
+        System.out.println("Used Cars need to change engine oil every 3000 to 5000 miles!!!");
+    }
+
+    public void checkTirePressure(){
+        System.out.println("Please, check the tire pressure!");
     }
 
     public UsedCars(String model,

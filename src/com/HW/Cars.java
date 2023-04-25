@@ -3,7 +3,7 @@ package com.HW;
 import java.util.Objects;
 
 public abstract class Cars {
-    // abstract, cant be instantiated
+    // abstract, can't be instantiated
 
     // fields/properties
     private String model;
@@ -35,7 +35,7 @@ public abstract class Cars {
     }
 
     // Setter method
-     public void setModel(String model) {
+    public void setModel(String model) {
         this.model = model;
      }
 
@@ -65,7 +65,7 @@ public abstract class Cars {
     }
 
     @Override
-    public int hashCode() { // equal hashcodes do not mean equal instances
+    public int hashCode() { // equal hashcode do not mean equal instances
         int hash = 7; // we start with none 0 prime number. Initial hash
         hash = 31 * hash + Objects.hashCode(this.averagePrice); // using the chart calculate the value
         return hash; // return the result
